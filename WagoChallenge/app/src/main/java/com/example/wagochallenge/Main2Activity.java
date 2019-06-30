@@ -35,12 +35,46 @@ public class Main2Activity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
 
+        SeekBar seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
+
+        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar2, int progress, boolean b) {
+                TextView txtView = (TextView)findViewById(R.id.textView5);
+                txtView.setText( "New Humidity: "+seekBar2.getProgress() + " %");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        SeekBar seekBar3 = (SeekBar)findViewById(R.id.seekBar3);
+
+        seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar3, int progress, boolean b) {
+                TextView txtView = (TextView)findViewById(R.id.textView7);
+                txtView.setText( "New Brightness: "+seekBar3.getProgress() + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
 
